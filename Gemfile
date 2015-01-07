@@ -3,10 +3,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+gem 'faker', '1.1.2'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails', '~> 2.14.0.rc1'
 end
 
 group :test do
