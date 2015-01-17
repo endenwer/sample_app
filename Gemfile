@@ -10,12 +10,27 @@ gem 'bootstrap-will_paginate'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.14.0.rc1'
+  gem 'guard-rspec', require: false
+  gem 'guard-livereload', require: false
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
+end
+
+group :development do
+  # Automagically launches tests for changed files
+  gem 'guard'
+  # And updates gems when needed
+  gem 'guard-bundler', require: false
+  # And auto starts rails server
+  gem 'guard-rails'
+  # And auto runs migrations
+  gem 'guard-migrate'
+  gem 'libnotify'
+  gem 'libnotify'
 end
 
 gem 'sass-rails', '~> 4.0.3'
